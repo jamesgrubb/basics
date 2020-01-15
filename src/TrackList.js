@@ -4,7 +4,7 @@ import { Player, Buffer, FFT } from 'tone'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
 
-const Tracklist = () => {
+const Tracklist = (props) => {
 	const fft = useRef(null)
 	const player = useRef(null)
 	const buffer = useRef(null)
@@ -39,6 +39,7 @@ const Tracklist = () => {
 
 		return () => cancelAnimationFrame(RAF.current)
 	}, [])
+
 	console.log(state.value)
 	console.log(state.isLoaded)
 	const handleClick = () => {
