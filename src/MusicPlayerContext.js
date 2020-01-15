@@ -4,6 +4,7 @@ const MusicPlayerContext = React.createContext([{}, () => {}])
 const MusicPlayerProvider = (props) => {
 	const [state, setState] = useState({
 		isLoaded: false,
+		value: [],
 		tracks: [
 			{
 				name: 'Go For Landing',
@@ -12,7 +13,6 @@ const MusicPlayerProvider = (props) => {
 				image:
 					'https://res.cloudinary.com/makingthings/image/upload/v1579080574/mp3/photo-1446941611757-91d2c3bd3d45.jpg'
 			}
-		
 		]
 	})
 	return (

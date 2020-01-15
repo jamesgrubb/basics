@@ -3,7 +3,7 @@ import './App.css'
 import Tracklist from './TrackList'
 import { MusicPlayerProvider } from './MusicPlayerContext'
 import { Player } from 'tone'
-
+import Canvas from './components/Canvas'
 function App() {
 	const player = useRef(null)
 
@@ -20,6 +20,7 @@ function App() {
 						<Tracklist />
 					</div>
 				</div>
+				<Canvas />
 			</div>
 		</MusicPlayerProvider>
 	)
