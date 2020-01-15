@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState, useRef } from 'react'
+import './App.css'
+import Tracklist from './TrackList'
+import { MusicPlayerProvider } from './MusicPlayerContext'
+import { Player } from 'tone'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const player = useRef(null)
+
+	// useEffect(()=>{
+	//   player.current =
+	// })
+
+	return (
+		<MusicPlayerProvider>
+			<div className='container'>
+				<div className='columns'>
+					<div className='column is-one-quarter'></div>
+					<div className='column is-three-quarters'>
+						<Tracklist />
+						<a href='' className='button is-primary is-small'>
+							Bulma
+						</a>
+					</div>
+				</div>
+			</div>
+		</MusicPlayerProvider>
+	)
 }
 
-export default App;
+export default App

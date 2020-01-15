@@ -1,0 +1,49 @@
+@import '../node_modules/bulma/bulma.sass';
+
+:root {
+	--loader: 0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	background-color: cornflowerblue;
+}
+
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+.box {
+	display: flex;
+	align-items: baseline;
+
+	background: linear-gradient(
+		to right,
+		$turquoise calc(100% * var(--loader)),
+		transparent 0
+	);
+
+	background-repeat: no-repeat;
+	background-size: 100% 0.6em;
+	background-color: $cyan;
+}
