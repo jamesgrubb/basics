@@ -47,20 +47,21 @@ const Tracklist = () => {
 
 	return (
 		<>
-			<div
-				className='box is-outlined'
-				style={{ '--loader': state.loadingProgress }}>
-				<button
-					disabled={!state.isLoaded}
-					className={
-						!state.isLoaded
-							? 'button is-primary is-loading'
-							: 'button is-primary'
-					}
-					onClick={handleClick}>
-					<FontAwesomeIcon icon={faPlay} />
-				</button>
-			</div>
+			{state.tracks.map((track) => (
+				<div className='box' style={{ '--loader': state.loadingProgress }}>
+					<button
+						disabled={!state.isLoaded}
+						className={
+							!state.isLoaded
+								? 'button is-primary is-loading'
+								: 'button is-primary'
+						}
+						onClick={handleClick}>
+						<FontAwesomeIcon icon={faPlay} />
+					</button>
+					<div className='song-title'>{track.name}</div>
+				</div>
+			))}
 		</>
 	)
 }
