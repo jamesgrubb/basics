@@ -18,9 +18,6 @@ function App() {
 					<div className='column is-one-quarter'></div>
 					<div className='column is-three-quarters'>
 						<Tracklist />
-						<a href='' className='button is-primary is-small'>
-							Bulma
-						</a>
 					</div>
 				</div>
 			</div>
